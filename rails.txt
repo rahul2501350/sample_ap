@@ -4,6 +4,35 @@ Rails commands:
 	"gem uninstall gem_name" ----> to uninstall a gem
 
 
+---CONTROLLER---
+
+	"rails generate controller StaticPages home help" ---->
+
+		#controller name in CamelCase and PRURAL generates snakecase file name(static_pages_controller.rb)
+		# generates (routes, views, helpers, assets)
+
+
+---------------------------------------------------------------------------------------------
+
+
+----------------UNDOING THINGS--------------------
+
+$ rails generate controller FooBars baz quux
+  $ rails destroy  controller FooBars baz quux
+
+$ rails generate model Foo bar:string baz:integer
+  $ rails destroy model Foo  
+
+$ rake db:migrate
+  $ rake db:rollback   -----> We can undo a single migration step using
+  $ rake db:migrate VERSION=0  ----->   To go all the way back to the beginning, we can use
+
+
+
+
+
+
+
 	"rails generate scaffold User name:string email:string"  ----> generate scaffold
 	"bundle exec rake db:migrate"  ---> to migrate database (scaffold)
 	"rake db:migrate"
