@@ -4,7 +4,7 @@ Rails commands:
 	"gem uninstall gem_name" ----> to uninstall a gem
 
 
----CONTROLLER---
+---CONTROLLER--------------
 
 	"rails generate controller StaticPages home help" ---->
 
@@ -18,7 +18,7 @@ Rails commands:
 ----------------UNDOING THINGS--------------------
 
 $ rails generate controller FooBars baz quux
-  $ rails destroy  controller FooBars baz quux
+  $ rails destroy controller FooBars baz quux
 
 $ rails generate model Foo bar:string baz:integer
   $ rails destroy model Foo  
@@ -27,10 +27,7 @@ $ rake db:migrate
   $ rake db:rollback   -----> We can undo a single migration step using
   $ rake db:migrate VERSION=0  ----->   To go all the way back to the beginning, we can use
 
-
-
-
-
+----------------------------------------------------------------------------------------------------------------------  
 
 
 	"rails generate scaffold User name:string email:string"  ----> generate scaffold
@@ -52,11 +49,18 @@ $ rake db:migrate
 		DemoApp::Application.routes.draw do
 		  resources :microposts
 		  resources :users
+
+		  get "static_pages/help"  -----> controller/action
 		  .
 		  .
 		  .
 		end	
 
+-----------------------------------------------------------
+
+er ---> <%     %>
+pe ---> <%=    %>
+pc ---> <%#    %>
 
 
 
