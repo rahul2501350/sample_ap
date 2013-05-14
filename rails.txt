@@ -16,6 +16,17 @@ Rails commands:
 
 
 ---------------------------------------------------------------------------------------------
+----MODEL---------------------------
+
+rails generate model User name:string email:string
+
+	# model name in camelcase and singular generates {users table(users)}, {migration file([ts]_create_users.rb)}, {model file(users.rb)}
+
+
+----MIGRATION----
+"bundle exec rake db:migrate"  -----> generate sql file
+
+----
 
 
 ----------------UNDOING THINGS--------------------
@@ -41,6 +52,7 @@ $ rake db:migrate
 		$ "bundle exec rake -T"  ---> To see all the Rake tasks available, run
 
 	"rails s" ----> run server
+	"rails c --sandbox" ----> console
 
 
 
