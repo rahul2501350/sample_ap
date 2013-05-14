@@ -101,28 +101,25 @@ GIT----------------------------
 	git checkout -f ---> 					we can still undo the changes easily by having Git check out the previous commit with the checkout command (and a -f flag to force overwriting the current changes)
 	git checkout master ---> come back to master branch
 
------ CREATING NEW REPO FROM COMMAND LINE-----
+------------- CREATING NEW REPO FROM COMMAND LINE ----------------
+
 	git init
 	git commit -m "first commit"
 	git remote add origin git@github.com:rahul2501350/first_app.git
 	git push -u origin master
 
 ------Push an existing repository from the command line-------
+
 	git remote add origin git@github.com:rahul2501350/first_app.git
 	git push -u origin master
 			# These commands tell Git that you want to add GitHub as the origin for your main (master) branch and then push your repository up to GitHub.
 			# Remember local branches will not be pushed until it is mergeg with master branch. to push local branch command "git push -u origin local_branch_name"
 
 	"git checkout <hash>"   ------> get commit hash from "git log"
-	"git checkout -b newbranch 6e559cb95" ----> create new branch with the commit
+	"git checkout -b newbranch 6e559cb95" ----> create new branch with the commit	
 
 
-
-
-------------------------------------------------------------------------------------------------------			
-
-
---BRANCH---
+----------------BRANCH-------------------------------
 
 git checkout -b new_branch_name   ----> creates new branch and switch to it.
 git branch  ----> shows all the branch and current branch
