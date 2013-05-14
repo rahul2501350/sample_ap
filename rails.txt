@@ -94,11 +94,12 @@ pc ---> <%#    %>
 
 GIT----------------------------
 
-	git init  -----> initialize git repo
-	git add . -----> add all the in git repo( except .gitignore) ---->  adds file to the stging area.
+	git init  -----> 						initialize git repo
+	git add . -----> 					add all the in git repo( except .gitignore) ---->  adds file to the stging area.
 	git commit -m "initial commit"	----> -m flag lets you enter the message for commit.	
-	git log ----> to see the commit messages, type "q" to quit.
-	git checkout -f ---> we can still undo the changes easily by having Git check out the previous commit with the checkout command (and a -f flag to force overwriting the current changes)
+	git log ----> 							to see the commit messages, type "q" to quit.
+	git checkout -f ---> 					we can still undo the changes easily by having Git check out the previous commit with the checkout command (and a -f flag to force overwriting the current changes)
+	git checkout master ---> come back to master branch
 
 ----- CREATING NEW REPO FROM COMMAND LINE-----
 	git init
@@ -111,6 +112,14 @@ GIT----------------------------
 	git push -u origin master
 			# These commands tell Git that you want to add GitHub as the origin for your main (master) branch and then push your repository up to GitHub.
 			# Remember local branches will not be pushed until it is mergeg with master branch. to push local branch command "git push -u origin local_branch_name"
+
+	"git checkout <hash>"   ------> get commit hash from "git log"
+	"git checkout -b newbranch 6e559cb95" ----> create new branch with the commit
+
+
+
+
+------------------------------------------------------------------------------------------------------			
 
 
 --BRANCH---
