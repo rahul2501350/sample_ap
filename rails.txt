@@ -11,6 +11,9 @@ Rails commands:
 		#controller name in CamelCase and PRURAL generates snakecase file name(static_pages_controller.rb)
 		# generates (routes, views, helpers, assets)
 
+		# to add new page add --> (route, page in view/controlles, action in respective controller)
+
+
 
 ---------------------------------------------------------------------------------------------
 
@@ -54,13 +57,37 @@ $ rake db:migrate
 		  .
 		  .
 		  .
-		end	
+		end
+
+
+
+		  # get "static_pages/home"
+		  # match '/', to: 'static_pages#home'
+		    root to: 'static_pages#home'
+
+		  # get "static_pages/help"
+		    match '/help', to: 'static_pages#help'
+
+		  # get "static_pages/about"
+		    match '/about', to: 'static_pages#about'
+
+		  # get "static_pages/contact"
+		    match '/contact', to: 'static_pages#contact'	
 
 -----------------------------------------------------------
 
 er ---> <%     %>
 pe ---> <%=    %>
 pc ---> <%#    %>
+
+------:LINK SYNTAX:-------
+<%= link_to "Sign up now!", '#', class: "btn btn-large btn-primary" %>
+<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+
+
+
+
+
 
 
 
@@ -82,7 +109,9 @@ GIT----------------------------
 ------Push an existing repository from the command line-------
 	git remote add origin git@github.com:rahul2501350/first_app.git
 	git push -u origin master
-			These commands tell Git that you want to add GitHub as the origin for your main (master) branch and then push your repository up to GitHub
+			# These commands tell Git that you want to add GitHub as the origin for your main (master) branch and then push your repository up to GitHub.
+			# Remember local branches will not be pushed until it is mergeg with master branch. to push local branch command "git push -u origin local_branch_name"
+
 
 --BRANCH---
 
