@@ -40,6 +40,7 @@ $ rails generate model Foo bar:string baz:integer
 $ rake db:migrate
   $ rake db:rollback   -----> We can undo a single migration step using
   $ rake db:migrate VERSION=0  ----->   To go all the way back to the beginning, we can use
+  $ bundle exec rake db:reset  -----> reset database
 
 ----------------------------------------------------------------------------------------------------------------------  
 
@@ -164,3 +165,10 @@ git push heroku master -----> push app to heroku
 heroku open  ------> to open web app on browser
 
 heroku create --stack cedar
+
+
+
+
+-----------------SUBLIME--------------------------
+
+Packages installed----
