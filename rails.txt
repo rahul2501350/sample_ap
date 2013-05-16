@@ -66,6 +66,10 @@ $ rake db:migrate
 		  resources :microposts
 		  resources :users
 
+		  resources :sessions, only: [:new, :create, :destroy]
+
+		  match '/signout', to: 'sessions#destroy', via: :delete
+
 		  get "static_pages/help"  -----> controller/action
 		  .
 		  .
@@ -165,6 +169,7 @@ git push heroku master -----> push app to heroku
 heroku open  ------> to open web app on browser
 
 heroku create --stack cedar
+$ heroku run rake db:migrate ---->  
 
 
 
@@ -172,3 +177,22 @@ heroku create --stack cedar
 -----------------SUBLIME--------------------------
 
 Packages installed----
+	
+	Applyayntax
+	ERB Snippets
+	HTML Snippets
+	HTML 5
+	HTML Attributes
+	HTMLBeautify
+	Line Completion
+	Package Control
+	Rails file switcher
+	Rails related files
+	rails sublime backup
+	Ruby on Rails snippets
+	SideBar Enhancements
+	Simple Rails Navigator
+	SublimeCodeIntel
+	sublimelint
+	SublimeLinter
+
